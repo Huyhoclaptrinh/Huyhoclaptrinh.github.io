@@ -3,282 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huy Phung (Jerry) - Portfolio</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        body.dark-mode {
-            background-color: #1a1a1a;
-            color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: relative;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        header p {
-            margin: 5px 0 0;
-            font-size: 1.2rem;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 20px auto;
-        }
-
-        h2 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 2rem;
-        }
-
-        body.dark-mode h2 {
-            color: #f4f4f4;
-        }
-
-        .about, .projects, .contact {
-            margin-bottom: 40px;
-        }
-
-        .project {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        body.dark-mode .project {
-            background-color: #2a2a2a;
-            color: #f4f4f4;
-        }
-
-        .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .project h3 {
-            margin-top: 0;
-            font-size: 1.5rem;
-            color: #333;
-        }
-
-        body.dark-mode .project h3 {
-            color: #f4f4f4;
-        }
-
-        .project ul {
-            padding-left: 20px;
-        }
-
-        .project ul li {
-            margin-bottom: 10px;
-        }
-
-        .project a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background-color: #333;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .project a:hover {
-            background-color: #555;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            width: 100%;
-            bottom: 0;
-        }
-
-        body.dark-mode footer {
-            background-color: #1a1a1a;
-        }
-
-        /* Dark Mode Toggle */
-        .dark-mode-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            cursor: pointer;
-            font-size: 1.2rem;
-            color: #fff;
-        }
-
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+    <title>Huy Phung (Jerry) Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-
     <header>
         <h1>Huy Phung (Jerry)</h1>
-        <p>Data Science Graduate Student | Machine Learning Enthusiast</p>
-        <div class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
+        <p>Welcome to my portfolio</p>
+        <div class="tabs">
+            <button class="active" data-tab="about" onclick="switchTab('about')">About</button>
+            <button data-tab="volunteer" onclick="switchTab('volunteer')">Volunteer Experience</button>
+            <button data-tab="education" onclick="switchTab('education')">Education</button>
+            <button data-tab="work" onclick="switchTab('work')">Work Experience</button>
+            <button data-tab="projects" onclick="switchTab('projects')">Projects</button>
+            <button data-tab="skills" onclick="switchTab('skills')">Skills</button>
+            <button data-tab="contact" onclick="switchTab('contact')">Contact</button>
+        </div>
     </header>
 
-    <div class="container">
-        <section class="about">
+    <main>
+        <section id="about" class="content-section active">
             <h2>About Me</h2>
-            <p>
-                Hello! I'm Huy Phung, or you can call me Jerry, a first-year graduate student in Data Science at the University of the Pacific.
-                I have worked with python proficiently and also have a fundamental of SQL skills, mostly postgreSQL when working as technical consultant at AHT TECH for improving or developing products which is back-end side of website. 
-                I also have fundamental knowledge of machines learning during the time I studied at University of Science and Technology of Hanoi.
-            </p>
+            <p>Hello! My name is Huy Phung, also known as Jerry. I am a Data Science graduate student with a passion for solving complex problems and creating impactful solutions using technology. Welcome to my portfolio where you can learn more about my education, work experience, and projects. In my freetime, I prefer watching series or listening to music or also watching football in the weekend.</p>
+            <a href="https://www.canva.com/design/DAGTNpVGHmw/EX2Pl16OiI3kLgK1JDnFzw/edit?utm_content=DAGTNpVGHmw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" 
+   target="_blank" class="project-button">
+   View My Resume
+</a>
         </section>
 
-        <section class="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1: Predictive Modeling for English Premier League (EPL) 2022-2023 Standings</h3>
-                <ul>
-                    <li>Developed a machine learning model to predict EPL standings using historical data (2020-2021 & 2021-2022 seasons), analyzing match, team, and player statistics.</li>
-                    <li>Conducted comprehensive data preprocessing, including merging datasets, feature scaling, and correlation analysis for feature selection.</li>
-                    <li>Successfully predicted outcomes with high accuracy (over 99.997% explained variance) using advanced machine learning techniques, including Random Forest and Linear Regression models.</li>
-                    <li>Visualized team performance using radar charts and tree-based graphs, providing insights into team trends and strengths.</li>
-                    <li>Addressed challenges such as data collection, feature selection, and model performance interpretation, enhancing model reliability and scalability.</li>
-                    <li>Suggested future enhancements, including real-time predictions, additional data sources, and model deployment for actionable insights.</li>
-                    <li>Presented findings in a detailed report and slides, predicting Manchester City as league champion and highlighting top-performing teams.</li>
-                </ul>
-                <a href="https://github.com/Huyhoclaptrinh/EPL-2022-23-prediction" target="_blank">View Project</a>
-            </div>
-            <div class="project">
-                <h3>Project 2: Music Website Using Sound Recognition</h3>
-                <ul>
-                    <li>Developed a Python-based website that used sound recognition to predict music when searching based on specific auditory features by Django.</li>
-                    <li>Applied Logistic Regression, Cost Function, and Regularization techniques to improve prediction accuracy by 5%.</li>
-                    <li>Built and integrated a user-friendly front-end interface by HTML, CSS/SCSS to allow users to upload sound files for real-time results.</li>
-                    <li>Optimized the performance and scalability of the website by implementing a fine-tuned database structure.</li>
-                    <li>Achieved a prediction accuracy of 55%, providing a reliable tool for assessing music performances.</li>
-                </ul>
-                <!-- <p>Description of the project. What it does, technologies used, and your role in it.</p> -->
-                <a href="https://github.com/Huyhoclaptrinh/Music-Website" target="_blank">View Project</a>
-            </div>
-            <!-- Add more projects as needed -->
-            <div class="project">
-                <h3>Project 3: Quarter Backs in 2022 Prediction</h3>
-                <!-- <p>Description of the project. What it does, technologies used, and your role in it.</p> -->
-                <ul>
-                    <li>Developed a predictive model to estimate ratings based on completion percentages, implementing simple linear regression with matrix inversion techniques (inv and pinv) using Python and NumPy.</li>
-                    <li>Analyzed datasets to identify trends and patterns, leveraging linear algebra concepts for accurate prediction and parameter optimization.</li>
-                    <li>Demonstrated proficiency in scientific programming and data preprocessing for real-world applications in prediction and analysis.</li>
-                </ul>
-                <a href="https://github.com/Huyhoclaptrinh/data-science-assignments/tree/main/ML/Assignment%204" target="_blank">View Project</a>
-            </div>
-
-            <div class="project">
-                <h3>Project 4: Image Processing and Dimensionality Reduction Using PCA</h3>
-                <!-- <p>Description of the project. What it does, technologies used, and your role in it.</p> -->
-                <ul>
-                    <li>Collaborated on a project to analyze multi-wavelength image data, applying linear scaling and Principal Component Analysis (PCA) for dimensionality reduction.</li>
-                    <li>Built a preprocessing pipeline to standardize data and extract key features, combining five different image channels into a single representative data channel.</li>
-                    <li>Demonstrated expertise in feature extraction, data visualization, and image processing to streamline analysis for large datasets.</li>
-                </ul>
-                <a href="https://github.com/Huyhoclaptrinh/data-science-assignments/tree/main/ML/Assignment%205" target="_blank">View Project</a>
-            </div>
-
-            <div class="project">
-                <h3>Project 5: Classification of Handwritten Patterns</h3>
-                <!-- <p>Description of the project. What it does, technologies used, and your role in it.</p> -->
-                <ul>
-                    <li>Designed and implemented a supervised learning model to classify patterns from a custom dataset with over 1,700 features and more than 200 samples per set.</li>
-                    <li>Utilized Singular Value Decomposition (SVD) for dimensionality reduction, effectively managing high-dimensional data while preserving key information.</li>
-                    <li>Preprocessed data through scaling, normalization, and feature engineering to enhance model accuracy and efficiency.</li>
-                    <li>Applied classification algorithms, evaluated performance metrics, and optimized the pipeline to ensure accurate prediction of target classes.</li>
-                    <li>Demonstrated proficiency in advanced machine learning techniques and handling complex datasets using Python and libraries such as NumPy and Scikit-learn.</li>
-                </ul>
-                <a href="https://github.com/Huyhoclaptrinh/data-science-assignments/tree/main/ML/Assignment%206" target="_blank">View Project</a>
-            </div>
-
-            <div class="project">
-                <h3>Project 6: Enhancing Road Safety Through Data-Driven Insights</h3>
-                <!-- <p>Description of the project. What it does, technologies used, and your role in it.</p> -->
-                <ul>
-                    <li>Utilized large-scale traffic datasets to analyze and visualize traffic flow, congestion patterns, and high-risk incident areas.</li>
-                    <li>Applied statistical methods to extract actionable insights, supporting recommendations for infrastructure improvements and safety interventions.</li>
-                    <li>Leveraged Python (pandas, NumPy, Scikit-learn) and data visualization libraries (Matplotlib, Seaborn) to communicate findings effectively.</li>
-                    <li>Collaborated within competition guidelines to propose innovative, data-driven solutions aimed at reducing traffic-related risks.</li>
-                </ul>
-                <a href="https://github.com/Huyhoclaptrinh/Explorer-TDSP" target="_blank">View Project</a>
-            </div>
-
-            <div class="project">
-                <h3>Project 7: Heart Attack Risk Classification</h3>
-                <!-- <p>Description of the project. What it does, technologies used, and your role in it.</p> -->
-                <ul>
-                    <li>Built a neural network model in PyTorch with two hidden layers (128 and 64 neurons) and dropout for regularization, achieving high classification performance for Low, Moderate, and High categories.</li>
-                    <li>Prepared custom PyTorch datasets and optimized model training using CrossEntropyLoss and the Adam optimizer over 50 epochs.</li>
-                    <li>Conducted data preprocessing, feature scaling, and encoding using Pandas and Scikit-learn.</li>
-                    <li>Evaluated results with precision, recall, F1-score, and confusion matrix visualizations.</li>
-                </ul>
-                <a href="https://github.com/Huyhoclaptrinh/personal-project/tree/master/Heart%20Attack%20Risk" target="_blank">View Project</a>
-            </div>
-
-            <div class="project">
-                <h3>Project 8: Trip AI Generator</h3>
-                <!-- <p>Description of the project. What it does, technologies used, and your role in it.</p> -->
-                <ul>
-                    <li>Designed and implemented a trip planning application using CrewAI and the Gemini API, optimizing for cost-effectiveness and flexibility.</li>
-                    <li>Integrated Serper API for secure and efficient server API key management.</li>
-                    <li>Developed trip generation logic to provide personalized recommendations based on user inputs.</li>
-                </ul>
-                <a href="https://github.com/Huyhoclaptrinh/personal-project/tree/master/AI%20Generator" target="_blank">View Project</a>
-            </div>
-        </section>
-
-        <section class="contact">
-            <h2>Contact Me</h2>
-            <p>If you'd like to get in touch, feel free to reach out via email or social media.</p>
+        <section id="volunteer" class="content-section">
+            <h2>Volunteer Experience</h2>
             <ul>
-                <li>Email: <a href="mailto:your.email@example.com">jerryphung282@gmail.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/huy-phung-gia-7b8a48216/" target="_blank">Huy Phung Gia</a></li>
-                <li>GitHub: <a href="https://github.com/Huyhoclaptrinh" target="_blank">Huyhoclaptrinh</a></li>
+                <div class="volunteer-item">
+                    <li class="project-item">
+                        <h3>Zoo Volunteer</h3>
+                        <ul>
+                            <li>Participated in wildlife conservation initiatives, including creating a pollinator garden for monarch butterflies.</li>
+                            <li>Developed engaging educational materials for zoo visitors.</li>
+                            <li>Assisted animal care staff in preparing diets and enrichment activities.</li>
+                            <li>Trained in delivering educational presentations.</li>
+                        </ul>
+                    </li>
+                    
+                </div>
+                <div class="volunteer-item">
+                    <li class="project-item">
+                        <h3>One Bus One Cause: MLK Jr. Service Day (January 2025)</h3>
+                        <ul>
+                            <li>Volunteered at the Black Urban Farm Association (BUFA).</li>
+                            <li>Assisted in farming activities to promote sustainable agriculture.</li>
+                            <li>Supported initiatives for African American cuisine and plant-based diets.</li>
+                            <li>Collaborated with peers to honor Martin Luther King Jr.’s legacy.</li>
+                        </ul>
+                    </li>
+                    
+                </div>
+                <div class="volunteer-item">
+                    <li class="project-item">
+                        <h3>Volunteer CyberKids (September - December 2022)</h3>
+                        <ul>
+                            <li>Taught primary to high school students cybersecurity fundamentals.</li>
+                            <li>Conducted bi-weekly meetings and adapted teaching strategies based on feedback.</li>
+                            <li>Ensured effective communication and engagement.</li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="volunteer-item">
+                    <li class="project-item">
+                        <h3>University Event Volunteer (October 2022)</h3>
+                        <ul>
+                            <li>Directed and performed at a university opening ceremony for 200+ attendees.</li>
+                            <li>Coordinated with event management teams.</li>
+                            <li>Managed outreach using social media platforms.</li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="volunteer-item">
+                    <li class="project-item">
+                        <h3>Ambassador Media Volunteer</h3>
+                        <ul>
+                            <li>Led a marketing campaign for an art competition on women in history.</li>
+                            <li>Organized interactive sessions and engaged audiences.</li>
+                            <li>Collaborated with the marketing team to create promotional materials.</li>
+                            <li>Managed outreach using social media platforms.</li>
+                        </ul>
+                    </li>
+                </div>
             </ul>
         </section>
-    </div>
+
+        <section id="education" class="content-section">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Master of Data Science</strong>, University of the Pacific | GPA: 4.0/4.0 (Expected May 2026)</li>
+                <li><strong>Bachelor of Information Communication and Technology</strong>, University of Science and Technology of Hanoi | GPA: 3.0/4.0 (December 2023)</li>
+            </ul>
+        </section>
+
+        <section id="work" class="content-section">
+            <h2>Work Experience</h2>
+            <ul>
+                <li><strong>Junior Technical Consultant</strong>, AHT Tech JSC (Dec 2023 - Aug 2024)
+                    <ul>
+                        <li>Optimized and maintained database queries, enhancing overall efficiency and reducing response times.</li>
+                        <li>Collaborated with cross-functional teams to streamline business workflows, ensuring smooth project delivery for clients.</li>
+                        <li>Developed automated solutions using Python and PostgreSQL.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="projects" class="content-section">
+            <h2>Projects</h2>
+            <ul>
+                <li class="project-item">
+                    <h3>Predictive Modeling for English Premier League (EPL) 2022-2023 Standings</h3>
+                    <ul>
+                        <li>Developed a machine learning model to predict EPL standings using historical data (2020-2021 & 2021-2022 seasons), analyzing match, team, and player statistics.</li>
+                        <li>Conducted comprehensive data preprocessing, including merging datasets, feature scaling, and correlation analysis for feature selection.</li>
+                        <li>Successfully predicted outcomes with high accuracy (over 99.997% explained variance) using advanced machine learning techniques, including Random Forest and Linear Regression models.</li>
+                        <li>Visualized team performance using radar charts and tree-based graphs, providing insights into team trends and strengths.</li>
+                        <li>Addressed challenges such as data collection, feature selection, and model performance interpretation, enhancing model reliability and scalability.</li>
+                        <li>Suggested future enhancements, including real-time predictions, additional data sources, and model deployment for actionable insights.</li>
+                        <li>Presented findings in a detailed report and slides, predicting Manchester City as league champion and highlighting top-performing teams.</li>
+                    </ul>
+                    <a href="https://github.com/Huyhoclaptrinh/EPL-2022-23-prediction" target="_blank" class="project-button">View Project</a>
+                </li>
+                <li class="project-item">
+                    <h3>Classification of Handwritten Patterns</h3>
+                    <ul>
+                        <li>Designed and implemented a supervised learning model to classify patterns from a custom dataset with over 1,700 features and more than 200 samples per set.</li>
+                        <li>Utilized Singular Value Decomposition (SVD) for dimensionality reduction, effectively managing high-dimensional data while preserving key information.</li>
+                        <li>Preprocessed data through scaling, normalization, and feature engineering to enhance model accuracy and efficiency.</li>
+                        <li>Applied classification algorithms, evaluated performance metrics, and optimized the pipeline to ensure accurate prediction of target classes.</li>
+                        <li>Demonstrated proficiency in advanced machine learning techniques and handling complex datasets using Python and libraries such as NumPy and Scikit-learn.</li>
+                    </ul>
+                    <a href="https://github.com/Huyhoclaptrinh/data-science-assignments/tree/main/ML/Assignment%206" target="_blank" class="project-button">View Project</a>
+                </li>
+                <li class="project-item">
+                    <h3>Music Website Using Sound Recognition</h3>
+                    <ul>
+                        <li>Developed a Python-based website that used sound recognition to predict music when searching based on specific auditory features by Django.</li>
+                        <li>Applied Logistic Regression, Cost Function, and Regularization techniques to improve prediction accuracy by 5%.</li>
+                        <li>Built and integrated a user-friendly front-end interface by HTML, CSS/SCSS to allow users to upload sound files for real-time results.</li>
+                        <li>Optimized the performance and scalability of the website by implementing a fine-tuned database structure.</li>
+                        <li>Achieved a prediction accuracy of 55%, providing a reliable tool for assessing music performances.</li>
+                    </ul>
+                    <a href="https://github.com/Huyhoclaptrinh/Music-Website" target="_blank" class="project-button">View Project</a>
+                </li>
+                <li class="project-item">
+                    <h3>Heart Attack Risk Classification</h3>
+                    <ul>
+                        <li>Built a neural network model in PyTorch with two hidden layers (128 and 64 neurons) and dropout for regularization, achieving high classification performance for Low, Moderate, and High categories.</li>
+                        <li>Prepared custom PyTorch datasets and optimized model training using CrossEntropyLoss and the Adam optimizer over 50 epochs.</li>
+                        <li>Conducted data preprocessing, feature scaling, and encoding using Pandas and Scikit-learn.</li>
+                        <li>Evaluated results with precision, recall, F1-score, and confusion matrix visualizations.</li>
+                    </ul>
+                    <a href="https://github.com/Huyhoclaptrinh/personal-project/tree/master/Heart%20Attack%20Risk" target="_blank" class="project-button">View Project</a>
+                </li>
+                <li class="project-item">
+                    <h3>Enhancing Road Safety Through Data-Driven Insights</h3>
+                    <ul>
+                        <li>Utilized large-scale traffic datasets to analyze and visualize traffic flow, congestion patterns, and high-risk incident areas.</li>
+                        <li>Applied statistical methods to extract actionable insights, supporting recommendations for infrastructure improvements and safety interventions.</li>
+                        <li>Leveraged Python (pandas, NumPy, Scikit-learn) and data visualization libraries (Matplotlib, Seaborn) to communicate findings effectively.</li>
+                        <li>Collaborated within competition guidelines to propose innovative, data-driven solutions aimed at reducing traffic-related risks.</li>
+                    </ul>
+                    <a href="https://github.com/Huyhoclaptrinh/Explorer-TDSP" target="_blank" class="project-button">View Project</a>
+                </li>
+                <li class="project-item">
+                    <h3>Image Processing and Dimensionality Reduction Using PCA</h3>
+                    <ul>
+                        <li>Collaborated on a project to analyze multi-wavelength image data, applying linear scaling and Principal Component Analysis (PCA) for dimensionality reduction.</li>
+                        <li>Built a preprocessing pipeline to standardize data and extract key features, combining five different image channels into a single representative data channel.</li>
+                        <li>Demonstrated expertise in feature extraction, data visualization, and image processing to streamline analysis for large datasets.</li>
+                    </ul>
+                    <a href="https://github.com/Huyhoclaptrinh/data-science-assignments/tree/main/ML/Assignment%205" target="_blank" class="project-button">View Project</a>
+                </li>
+                <li class="project-item">
+                    <h3>Quarter Backs in 2022 Prediction</h3>
+                    <ul>
+                        <li>Developed a predictive model to estimate ratings based on completion percentages, implementing simple linear regression with matrix inversion techniques (inv and pinv) using Python and NumPy.</li>
+                        <li>Analyzed datasets to identify trends and patterns, leveraging linear algebra concepts for accurate prediction and parameter optimization.</li>
+                        <li>Demonstrated proficiency in scientific programming and data preprocessing for real-world applications in prediction and analysis.</li>
+                    </ul>
+                    <a href="https://github.com/Huyhoclaptrinh/data-science-assignments/tree/main/ML/Assignment%204" target="_blank" class="project-button">View Project</a>
+                </li>
+                <li class="project-item">
+                    <h3>Trip AI Generator</h3>
+                    <ul>
+                        <li>Designed and implemented a trip planning application using CrewAI and the Gemini API, optimizing for cost-effectiveness and flexibility.</li>
+                        <li>Integrated Serper API for secure and efficient server API key management.</li>
+                        <li>Developed trip generation logic to provide personalized recommendations based on user inputs.</li>
+                    </ul>
+                    <a href="https://github.com/Huyhoclaptrinh/personal-project/tree/master/AI%20Generator" target="_blank" class="project-button">View Project</a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="skills" class="content-section">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> Python</li>
+                <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
+                <li><strong>Technologies:</strong> pandas, NumPy, Scikit-learn, Matplotlib, PyTorch</li>
+                <li><strong>Tools:</strong> Git, Jupyter, PyCharm, Visual Studio Code</li>
+                <li><strong>Data Analysis:</strong> Excel</li>
+                <li><strong>Languages:</strong> French (Fundamental), English (Good)</li>
+                <li><strong>Soft Skills:</strong> Teamwork, Time Management</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me through the following channels:</p>
+            <ul>
+                <li>Email: g_phung@u.pacific.edu</li>
+                <li>Phone: +1 (350) 217 9492</li>
+                <li>GitHub: <a href="https://github.com/Huyhoclaptrinh" target="_blank">github.com/Huyhoclaptrinh</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/jerry-phung-7b8a48216/" target="_blank">linkedin.com/in/jerry-phung-7b8a48216</a></li>
+            </ul>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 Huy Phung (Jerry). All rights reserved.</p>
+        <p>&copy; 2025 Huy Phung. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Dark Mode Toggle
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-            const toggle = document.querySelector('.dark-mode-toggle');
-            toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-        }
-    </script>
 </body>
 </html>
