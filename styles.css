@@ -140,3 +140,61 @@ a[href=""] {
 .pagination button.active {
     background: #999;
 }
+
+.work-experience {
+    margin-bottom: 30px;
+}
+
+.work-experience h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.work-experience p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.work-experience ul {
+    margin-left: 20px;
+}
+
+.divider {
+    border: 0;
+    height: 2px;
+    background: #ddd;
+    margin: 30px 0;
+}
+
+.work-projects h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.project {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-left: 4px solid #555;
+    background: #f9f9f9;
+    padding-left: 15px;
+}
+
+.project h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.project .date {
+    font-size: 16px;
+    color: #777;
+    font-weight: normal;
+}
+
+.project p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 5px;
+}
