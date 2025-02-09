@@ -92,3 +92,26 @@ footer {
 .project-button:hover {
     background-color: #777;
 }
+
+.blog-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #555; /* Different background color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.blog-button:hover {
+    background-color: #777; /* Hover color */
+}
+
+a[href=""] {
+    pointer-events: none;
+    cursor: default;
+    color: gray; /* Optional: Change color to indicate it's disabled */
+}
