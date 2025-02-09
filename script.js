@@ -1,89 +1,58 @@
 function switchTab(tabId) {
-    const sections = document.querySelectorAll('.content-section');
-    const tabs = document.querySelectorAll('.tabs button');
-
-    sections.forEach(section => section.classList.remove('active'));
-    tabs.forEach(tab => tab.classList.remove('active'));
+    document.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
+    document.querySelectorAll('.tabs button').forEach(tab => tab.classList.remove('active'));
 
     document.getElementById(tabId).classList.add('active');
     document.querySelector(`button[data-tab="${tabId}"]`).classList.add('active');
 }
 
+/* Disable Empty Links */
 function disableEmptyLinks() {
-    const links = document.querySelectorAll('a[href=""]');
-    links.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-        });
+    document.querySelectorAll('a[href=""]').forEach(link => {
+        link.addEventListener('click', event => event.preventDefault());
         link.style.pointerEvents = 'none';
-        link.style.cursor = 'default';
-        link.style.color = 'gray'; // Optional: Change color to indicate it's disabled
+        link.style.color = 'gray';
     });
 }
 
-// Call the function after the DOM has loaded
-document.addEventListener('DOMContentLoaded', disableEmptyLinks);
-
+/* Pagination for Projects */
 document.addEventListener('DOMContentLoaded', function () {
-    const itemsPerPage = 10;
+    const itemsPerPage = 5;
 
-    function createProjectPages(sectionId) {
+    function paginateSection(sectionId) {
         const section = document.getElementById(sectionId);
-        const list = section.querySelector('ul'); // Get the main <ul> inside the section
-        const items = Array.from(list.querySelectorAll('li.project-item')); // Select only <li> elements with class 'project-item'
+        const items = Array.from(section.querySelectorAll('li.project-item'));
         const totalItems = items.length;
-
-        if (totalItems <= itemsPerPage) return; // No pagination if 10 or fewer project items
-
         const totalPages = Math.ceil(totalItems / itemsPerPage);
-        const pages = []; // Store the dynamically created pages
+        const container = document.createElement('div');
+        container.classList.add('pagination');
 
-        // Remove project items from the original <ul>
-        items.forEach(item => list.removeChild(item));
+        let currentPage = 0;
 
-        for (let i = 0; i < totalPages; i++) {
-            // Create a new <ul> for each page
-            let newList = document.createElement('ul');
-            newList.classList.add('project-list');
-            if (i !== 0) newList.style.display = 'none'; // Hide all except the first page
-
-            // Move 10 <li.project-item> items to the new <ul>
-            for (let j = i * itemsPerPage; j < (i + 1) * itemsPerPage && j < totalItems; j++) {
-                newList.appendChild(items[j]);
-            }
-
-            section.appendChild(newList);
-            pages.push(newList);
-        }
-
-        // Create pagination controls
-        const paginationContainer = document.createElement('div');
-        paginationContainer.className = 'pagination';
-
-        for (let i = 0; i < totalPages; i++) {
-            let pageButton = document.createElement('button');
-            pageButton.textContent = i + 1;
-            pageButton.addEventListener('click', () => showPage(i));
-            paginationContainer.appendChild(pageButton);
-        }
-
-        section.appendChild(paginationContainer);
-
-        function showPage(pageIndex) {
-            pages.forEach((page, index) => {
-                page.style.display = index === pageIndex ? 'block' : 'none';
+        function showPage(page) {
+            items.forEach((item, index) => {
+                item.style.display = (index >= page * itemsPerPage && index < (page + 1) * itemsPerPage) ? 'block' : 'none';
             });
 
-            // Update active button state
-            const buttons = paginationContainer.getElementsByTagName('button');
-            Array.from(buttons).forEach((button, index) => {
-                button.classList.toggle('active', index === pageIndex);
+            document.querySelectorAll('.pagination button').forEach((btn, index) => {
+                btn.classList.toggle('active', index === page);
             });
         }
 
-        showPage(0); // Show the first page initially
+        for (let i = 0; i < totalPages; i++) {
+            let btn = document.createElement('button');
+            btn.textContent = i + 1;
+            btn.addEventListener('click', () => {
+                currentPage = i;
+                showPage(i);
+            });
+            container.appendChild(btn);
+        }
+
+        section.appendChild(container);
+        showPage(0);
     }
 
-    // Apply pagination to the Projects section
-    createProjectPages('projects');
+    paginateSection('projects');
+    disableEmptyLinks();
 });
