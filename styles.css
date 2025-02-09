@@ -115,3 +115,28 @@ a[href=""] {
     cursor: default;
     color: gray; /* Optional: Change color to indicate it's disabled */
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.pagination button {
+    background: #555;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.pagination button:hover {
+    background: #777;
+}
+
+.pagination button.active {
+    background: #999;
+}
