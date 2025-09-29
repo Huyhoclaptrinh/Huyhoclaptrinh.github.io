@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huy Phung (Jerry) Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
@@ -117,6 +121,19 @@
             <h2>Work Experience</h2>
         
             <div class="work-experience">
+                <h3>Intern ML engineer</h3>
+                <p><strong>TreeScape Power Solution</strong> (July 2025 - September 2025)</p>
+                <ul>
+                    <li>Developed and improved a <b>data pipeline</b> to evaluate <b>tree health scores</b> from images, reaching <b>~70–75% accuracy</b> in initial tests.</li>
+                    <li>Collected and preprocessed training data; applied <b>color-based methods</b> (<b>HSV segmentation</b> and <b>LAB analysis</b>) to distinguish between healthy and defective tree regions.</li>
+                    <li>Implemented <b>feature extraction</b> for different tree parts (crown, stem, leaves) to support structured health assessments.</li>
+                    <li>Converted trained models into <b>TensorFlow Lite</b> for potential deployment on <b>mobile applications</b>.</li>
+                </ul>
+            </div>
+        
+            <hr class="divider">
+
+            <div class="work-experience">
                 <h3>Junior Technical Consultant</h3>
                 <p><strong>AHT Tech JSC</strong> (Dec 2023 - Aug 2024)</p>
                 <ul>
@@ -130,6 +147,12 @@
         
             <div class="work-projects">
                 <h2>Work Projects</h2>
+
+                <div class="project">
+                    <h3>Tree Defects Detection <span class="date">(09/2025)</span></h3>
+                    <p><strong>Technology:</strong> Python, TensorFlow, OpenCV, Scikit-learn</p>
+                    <p><strong>Description:</strong> Developed a data pipeline to evaluate tree health scores from images, achieving ~70-75% accuracy. Utilized color-based methods (HSV, LAB) for segmentation and feature extraction to distinguish between healthy and defective tree regions. Converted models to TensorFlow Lite for mobile deployment.</p>
+                </div>
         
                 <div class="project">
                     <h3>BUY Project <span class="date">(07/2023)</span></h3>
@@ -161,6 +184,16 @@
         <section id="projects" class="content-section">
             <h2>Projects</h2>
             <ul>
+                <li class="project-item">
+                    <h3>Human Behavior Detection</h3>
+                    <ul>
+                        <li>Built a YOLOv8 + FastAPI pipeline to detect smoking and drinking behaviors with ~68–70% accuracy.</li>
+                        <li>Applied postprocessing (Soft-NMS, ROI analysis, calibration) to reduce false positives.</li>
+                        <li>Deployed as a web app with authentication, video overlay, and event logging.</li>
+                    </ul>
+                    <a href="https://github.com/Huyhoclaptrinh/human-action-detection" target="_blank" class="project-button">View Project</a>
+                    <a href="" target="_blank" class="blog-button">View Blog</a>
+                </li>
                 <li class="project-item">
                     <h3>Predictive Modeling for English Premier League (EPL) 2022-2023 Standings</h3>
                     <ul>
@@ -296,18 +329,40 @@
                     <a href="" target="_blank" class="blog-button">View Blog</a>
                 </li>
             </ul>
+            <div class="pagination"></div>
         </section>
 
         <section id="skills" class="content-section">
             <h2>Skills</h2>
             <ul>
-                <li><strong>Programming Languages:</strong> Python</li>
-                <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
-                <li><strong>Technologies:</strong> pandas, NumPy, Scikit-learn, Matplotlib, PyTorch</li>
-                <li><strong>Tools:</strong> Git, Jupyter, PyCharm, Visual Studio Code</li>
-                <li><strong>Data Analysis:</strong> Excel</li>
-                <li><strong>Languages:</strong> French (Fundamental), English (Good)</li>
-                <li><strong>Soft Skills:</strong> Teamwork, Time Management</li>
+                <li class="skill-item">
+                    <span class="label"><i class="fas fa-code"></i><strong>Programming Languages:</strong></span>
+                    <span class="value">Python</span>
+                </li>
+                <li class="skill-item">
+                    <span class="label"><i class="fas fa-database"></i><strong>Databases:</strong></span>
+                    <span class="value">MySQL, PostgreSQL</span>
+                </li>
+                <li class="skill-item">
+                    <span class="label"><i class="fas fa-cogs"></i><strong>Technologies:</strong></span>
+                    <span class="value">pandas, NumPy, Scikit-learn, Matplotlib, PyTorch, YOLOv8, FastAPI, TensorFlow, OpenCV, TensorFlow Lite</span>
+                </li>
+                <li class="skill-item">
+                    <span class="label"><i class="fas fa-tools"></i><strong>Tools:</strong></span>
+                    <span class="value">Git, Jupyter, PyCharm, Visual Studio Code</span>
+                </li>
+                <li class="skill-item">
+                    <span class="label"><i class="fas fa-chart-bar"></i><strong>Data Analysis:</strong></span>
+                    <span class="value">Excel, Soft-NMS, ROI analysis, HSV segmentation, LAB analysis</span>
+                </li>
+                <li class="skill-item">
+                    <span class="label"><i class="fas fa-language"></i><strong>Languages:</strong></span>
+                    <span class="value">Vietnamese (Native/Fluent), English (Good), French (Fundamental)</span>
+                </li>
+                <li class="skill-item">
+                    <span class="label"><i class="fas fa-users"></i><strong>Soft Skills:</strong></span>
+                    <span class="value">Teamwork, Time Management</span>
+                </li>
             </ul>
         </section>
 
@@ -315,11 +370,11 @@
             <h2>Contact</h2>
             <p>Feel free to reach out to me through the following channels:</p>
             <ul>
-                <li>Email: g_phung@u.pacific.edu</li>
-                <li>Phone: +1 (350) 217 9492</li>
-                <li>GitHub: <a href="https://github.com/Huyhoclaptrinh" target="_blank">github.com/Huyhoclaptrinh</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/huy-phung-gia-7b8a48216/" target="_blank">linkedin.com/in/jerry-phung-7b8a48216</a></li>
-                <li>Blog: <a href="https://medium.com/@jerryphung282" target="_blank">https://medium.com/@jerryphung282</a></li>
+                <li><i class="fas fa-envelope"></i>Email: <a href="mailto:jerryphung282@gmail.com">jerryphung282@gmail.com</a></li>
+                <li><i class="fas fa-phone"></i>Phone: +1 (350) 217 9492</li>
+                <li><i class="fab fa-github"></i>GitHub: <a href="https://github.com/Huyhoclaptrinh" target="_blank">github.com/Huyhoclaptrinh</a></li>
+                <li><i class="fab fa-linkedin"></i>LinkedIn: <a href="https://www.linkedin.com/in/huy-phung-gia/" target="_blank">linkedin.com/in/huy-phung-gia</a></li>
+                <li><i class="fab fa-medium"></i>Blog: <a href="https://medium.com/@jerryphung282" target="_blank">https://medium.com/@jerryphung282</a></li>
             </ul>
         </section>
     </main>
