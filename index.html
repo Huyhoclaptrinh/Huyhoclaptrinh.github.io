@@ -185,11 +185,56 @@
             <h2>Projects</h2>
             <ul>
                 <li class="project-item">
+                    <h3>StreamLingo AI – Real-Time Client-Side Speech Translation</h3>
+                    <ul>
+                        <li><strong>Tech Stack:</strong> React 18, Vite, Transformers.js, ONNX Runtime, Web Audio API, Silero VAD.</li>
+                        <li>Private, unlimited, in-browser speech-to-text translation powered by WebAssembly.</li>
+                        <li>Runs Whisper (ASR) and Opus-MT (Translation) models directly in the browser.</li>
+                        <li>Features smart voice detection to ignore background noise and multi-language support (English, Vietnamese, Chinese).</li>
+                        <li>Utilizes <code>navigator.mediaDevices.getDisplayMedia</code> to capture and translate audio from browser tabs or applications.</li>
+                    </ul>
+                    <a href="https://github.com/Huyhoclaptrinh/streamlingo-ai" target="_blank" class="project-button">View Project</a>
+                </li>
+                <li class="project-item">
+                    <h3>WatchParty Bot - An AI Companion for Discord Watch-Alongs</h3>
+                    <ul>
+                        <li><strong>Tech Stack:</strong> Python, discord.py, Google Gemini API, SpeechRecognition, numpy, scipy, asyncio, libopus.</li>
+                        <li>An interactive Discord bot that simulates watching movies/shows with a friend.</li>
+                        <li>Listens to voice chat, reacts to loud moments, and prevents "dead air" by initiating conversation.</li>
+                        <li>Features dynamic character roleplay and a crossover mode for unique interactions.</li>
+                        <li>Powered by Google's gemini-2.5-flash-lite model for fast, context-aware responses.</li>
+                    </ul>
+                    <a href="https://github.com/Huyhoclaptrinh/watchparty-bot" target="_blank" class="project-button">View Project</a>
+                </li>
+                <li class="project-item">
+                    <h3>AI Voice Assistant for Runners (PulseRunner)</h3>
+                    <ul>
+                        <li><strong>Tech Stack:</strong> React Native, TypeScript, Python (FastAPI), SQLite, HealthKit & Google Fit.</li>
+                        <li>A cross-platform mobile application designed to be an intelligent running companion.</li>
+                        <li>Integrates with native health APIs (Apple HealthKit & Google Fit) to track biometric data in real-time.</li>
+                        <li>Provides voice-based coaching and feedback using Text-to-Speech technology.</li>
+                        <li>Built with a robust Python FastAPI backend for data analysis and run history management.</li>
+                    </ul>
+                    <a href="https://github.com/pluckypioneer/AI-Voice-Assistant-for-Runners" target="_blank" class="project-button">View Project</a>
+                </li>
+                <li class="project-item">
+                    <h3>Smart Parking Detection & Recommendation System (GoPark)</h3>
+                    <ul>
+                        <li><strong>Tech Stack:</strong> Python, FastAPI, PyTorch, YOLOv8, OpenCV, PostgreSQL, Docker.</li>
+                        <li>An AI-powered application that uses computer vision to detect parking occupancy in real-time.</li>
+                        <li>Recommends optimal spots based on vehicle size and user preferences via a natural language interface.</li>
+                        <li>Features a two-stage computer vision pipeline with YOLOv8 and ResNet.</li>
+                        <li>Includes a natural language search interface (NLP) and an intelligent recommendation engine.</li>
+                    </ul>
+                    <a href="https://github.com/hungkaihsin/Parking_lot_detection" target="_blank" class="project-button">View Project</a>
+                </li>
+                <li class="project-item">
                     <h3>GOPHORA</h3>
                     <ul>
+                        <li><strong>Tech Stack:</strong> FastAPI, React, PostgreSQL, Elastic Stack (ELK), AI/NLP.</li>
                         <li>GOPHORA is an AI-driven platform designed to connect human potential with real opportunities in work, learning, and purpose-driven missions.</li>
-                        <li>Inspired by the biological “lateral line” system in sharks, it uses real-time data and the Elastic Stack (Elasticsearch, Kibana, Logstash, Beats, and Elastic APM) to sense and visualize human energy — helping users discover and act on meaningful paths.</li>
-                        <li>Built with FastAPI, React, PostgreSQL, and AI-powered natural language processing, GOPHORA transforms data into personalized, actionable insights that enhance human growth and collaboration rather than replace it.</li>
+                        <li>Inspired by the biological “lateral line” system in sharks, it uses real-time data and the Elastic Stack (Elasticsearch, Kibana, Logstash, Beats, and Elastic APM) to sense and visualize human energy.</li>
+                        <li>Built with FastAPI, React, PostgreSQL, and AI-powered natural language processing.</li>
                     </ul>
                     <a href="https://github.com/Safia-Liaqat/GOPHORA" target="_blank" class="project-button">View Project</a>
                     <a href="" target="_blank" class="blog-button">View Blog</a>
@@ -197,6 +242,7 @@
                 <li class="project-item">
                     <h3>Health Insurance Cross-Sell Prediction</h3>
                     <ul>
+                        <li><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, Clustering Algorithms.</li>
                         <li>This project is a machine learning pipeline to predict whether a customer who has health insurance would also be interested in purchasing vehicle insurance (cross-selling).</li>
                         <li>The project uses customer data to perform segmentation using clustering and then uses this information to predict the likelihood of a cross-sell.</li>
                     </ul>
@@ -206,6 +252,7 @@
                 <li class="project-item">
                     <h3>CI Log Triage Copilot</h3>
                     <ul>
+                        <li><strong>Tech Stack:</strong> Python, RAG (Retrieval-Augmented Generation), LLM Agents.</li>
                         <li>A retrieval-augmented, lightweight agent designed to accelerate the diagnosis of failures in CI/CD pipelines.</li>
                         <li>Reads CI failure logs, classifies root causes, and recommends actionable fixes.</li>
                         <li>Features rule-based weak labeling, hybrid retrieval, and a lightweight agent loop.</li>
@@ -216,6 +263,7 @@
                 <li class="project-item">
                     <h3>IMDB Review NLP</h3>
                     <ul>
+                        <li><strong>Tech Stack:</strong> Python, Jupyter Notebooks, NLP (NLTK/Spacy).</li>
                         <li>Performed sentiment analysis on IMDB movie reviews using NLP techniques.</li>
                         <li>Utilized Python and Jupyter Notebooks for data analysis and modeling.</li>
                         <li>The project involved data generation, cleaning, and preparation for the NLP pipeline.</li>
@@ -226,6 +274,7 @@
                 <li class="project-item">
                     <h3>Students Performance Dashboard</h3>
                     <ul>
+                        <li><strong>Tech Stack:</strong> Python, Dash, Plotly.</li>
                         <li>Built an interactive dashboard with Dash and Plotly to visualize student performance.</li>
                         <li>Analyzed how student demographics and test preparation relate to exam scores.</li>
                         <li>Features include filtering by average score, and visualizing data by gender and parental education.</li>
@@ -236,6 +285,7 @@
                 <li class="project-item">
                     <h3>Human Behavior Detection</h3>
                     <ul>
+                        <li><strong>Tech Stack:</strong> Python, YOLOv8, FastAPI, OpenCV.</li>
                         <li>Built a YOLOv8 + FastAPI pipeline to detect smoking and drinking behaviors with ~68–70% accuracy.</li>
                         <li>Applied postprocessing (Soft-NMS, ROI analysis, calibration) to reduce false positives.</li>
                         <li>Deployed as a web app with authentication, video overlay, and event logging.</li>
@@ -246,13 +296,11 @@
                 <li class="project-item">
                     <h3>Predictive Modeling for English Premier League (EPL) 2022-2023 Standings</h3>
                     <ul>
-                        <li>Developed a machine learning model to predict EPL standings using historical data (2020-2021 & 2021-2022 seasons), analyzing match, team, and player statistics.</li>
-                        <li>Conducted comprehensive data preprocessing, including merging datasets, feature scaling, and correlation analysis for feature selection.</li>
-                        <li>Successfully predicted outcomes with <b>high accuracy (over 99.997% explained variance)</b> using advanced machine learning techniques, including <b>Random Forest and Linear Regression models</b>.</li>
-                        <li>Visualized team performance using radar charts and tree-based graphs, providing insights into team trends and strengths.</li>
-                        <li>Addressed challenges such as data collection, feature selection, and model performance interpretation, enhancing model reliability and scalability.</li>
-                        <li>Suggested future enhancements, including real-time predictions, additional data sources, and model deployment for actionable insights.</li>
-                        <li>Presented findings in a detailed report and slides, predicting Manchester City as league champion and highlighting top-performing teams.</li>
+                        <li><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, Matplotlib.</li>
+                        <li>Developed a machine learning model to predict EPL standings using historical data (2020-2021 & 2021-2022 seasons).</li>
+                        <li>Conducted comprehensive data preprocessing, including merging datasets, feature scaling, and correlation analysis.</li>
+                        <li>Successfully predicted outcomes with <b>high accuracy</b> using advanced machine learning techniques, including <b>Random Forest and Linear Regression models</b>.</li>
+                        <li>Visualized team performance using radar charts and tree-based graphs.</li>
                     </ul>
                     <a href="https://github.com/Huyhoclaptrinh/EPL-2022-23-prediction" target="_blank" class="project-button">View Project</a>
                     <a href="https://medium.com/@jerryphung282/predicting-the-english-premier-league-epl-2022-2023-results-with-machine-learning-40148775cbd3" target="_blank" class="blog-button">View Blog</a>
@@ -260,11 +308,10 @@
                 <li class="project-item">
                     <h3>Classification of Handwritten Patterns</h3>
                     <ul>
-                        <li>Designed and implemented a supervised learning model to classify patterns from a custom dataset with over 1,700 features and more than 200 samples per set.</li>
-                        <li>Utilized <b>Singular Value Decomposition (SVD)</b> for dimensionality reduction, effectively managing high-dimensional data while preserving key information.</li>
-                        <li>Preprocessed data through scaling, normalization, and feature engineering to enhance model accuracy and efficiency.</li>
-                        <li>Applied classification algorithms, evaluated performance metrics, and optimized the pipeline to ensure accurate prediction of target classes.</li>
-                        <li>Demonstrated proficiency in advanced machine learning techniques and handling complex datasets using <b>Python</b> and libraries such as <b>NumPy and Scikit-learn</b>.</li>
+                        <li><strong>Tech Stack:</strong> Python, NumPy, Scikit-learn (SVD).</li>
+                        <li>Designed and implemented a supervised learning model to classify patterns from a custom dataset.</li>
+                        <li>Utilized <b>Singular Value Decomposition (SVD)</b> for dimensionality reduction.</li>
+                        <li>Preprocessed data through scaling, normalization, and feature engineering.</li>
                     </ul>
                     <a href="https://github.com/Huyhoclaptrinh/data-science-assignments/tree/main/ML/Assignment%206" target="_blank" class="project-button">View Project</a>
                     <a href="https://medium.com/@jerryphung282/cracking-handwritten-digit-classification-with-svd-757c64d0cf91" target="_blank" class="blog-button">View Blog</a>
@@ -272,11 +319,10 @@
                 <li class="project-item">
                     <h3>Music Website Using Sound Recognition</h3>
                     <ul>
+                        <li><strong>Tech Stack:</strong> Python, Django, HTML, CSS/SCSS, Scikit-learn.</li>
                         <li>Developed a <b>Python-based website</b> that used sound recognition to predict music when searching based on specific auditory features by <b>Django</b>.</li>
                         <li>Applied <b>Logistic Regression, Cost Function, and Regularization techniques</b> to improve prediction accuracy by 5%.</li>
-                        <li>Built and integrated a user-friendly front-end interface by <b>HTML, CSS/SCSS</b> to allow users to upload sound files for real-time results.</li>
-                        <li>Optimized the performance and scalability of the website by implementing a fine-tuned database structure.</li>
-                        <li>Achieved <b>a prediction accuracy of 55%</b>, providing a reliable tool for assessing music performances.</li>
+                        <li>Built and integrated a user-friendly front-end interface by <b>HTML, CSS/SCSS</b>.</li>
                     </ul>
                     <a href="https://github.com/Huyhoclaptrinh/Music-Website" target="_blank" class="project-button">View Project</a>
                     <a href="" target="_blank" class="blog-button">View Blog</a>
@@ -284,10 +330,10 @@
                 <li class="project-item">
                     <h3>Heart Attack Risk Classification</h3>
                     <ul>
-                        <li>Built a neural network model in <b>PyTorch</b> with two hidden layers (128 and 64 neurons) and dropout for regularization, achieving high classification performance for Low, Moderate, and High categories.</li>
-                        <li>Prepared custom <b>PyTorch</b> datasets and optimized model training using <b>CrossEntropyLoss and the Adam</b> optimizer over 50 epochs.</li>
+                        <li><strong>Tech Stack:</strong> Python, PyTorch, Pandas, Scikit-learn.</li>
+                        <li>Built a neural network model in <b>PyTorch</b> with two hidden layers and dropout for regularization.</li>
+                        <li>Prepared custom <b>PyTorch</b> datasets and optimized model training using <b>CrossEntropyLoss and the Adam</b> optimizer.</li>
                         <li>Conducted data preprocessing, feature scaling, and encoding using <b>Pandas and Scikit-learn</b>.</li>
-                        <li>Evaluated results with <b>precision, recall, F1-score, and confusion matrix visualizations</b>.</li>
                     </ul>
                     <a href="https://github.com/Huyhoclaptrinh/personal-project/tree/master/Heart%20Attack%20Risk" target="_blank" class="project-button">View Project</a>
                     <a href="https://medium.com/@jerryphung282/heart-attack-risk-classification-a-machine-learning-approach-7a56ad706ccf" target="_blank" class="blog-button">View Blog</a>
@@ -295,10 +341,10 @@
                 <li class="project-item">
                     <h3>Enhancing Road Safety Through Data-Driven Insights</h3>
                     <ul>
+                        <li><strong>Tech Stack:</strong> Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn.</li>
                         <li>Utilized large-scale traffic datasets to analyze and visualize traffic flow, congestion patterns, and high-risk incident areas.</li>
-                        <li>Applied statistical methods to extract actionable insights, supporting recommendations for infrastructure improvements and safety interventions.</li>
-                        <li>Leveraged <b>Python (pandas, NumPy, Scikit-learn)</b> and -data visualization libraries (Matplotlib, Seaborn)</b> to communicate findings effectively.</li>
-                        <li>Collaborated within competition guidelines to propose innovative, data-driven solutions aimed at reducing traffic-related risks.</li>
+                        <li>Applied statistical methods to extract actionable insights.</li>
+                        <li>Leveraged <b>Python (pandas, NumPy, Scikit-learn)</b> and data visualization libraries (Matplotlib, Seaborn).</li>
                     </ul>
                     <a href="https://github.com/Huyhoclaptrinh/Explorer-TDSP" target="_blank" class="project-button">View Project</a>
                     <a href="https://medium.com/@jerryphung282/enhancing-road-safety-through-data-driven-insights-66751291dba7" target="_blank" class="blog-button">View Blog</a>
@@ -306,9 +352,9 @@
                 <li class="project-item">
                     <h3>Image Processing and Dimensionality Reduction Using PCA</h3>
                     <ul>
+                        <li><strong>Tech Stack:</strong> Python, Scikit-learn (PCA), NumPy.</li>
                         <li>Collaborated on a project to analyze multi-wavelength image data, applying <b>linear scaling</b> and <b>Principal Component Analysis (PCA)</b> for dimensionality reduction.</li>
-                        <li>Built a preprocessing pipeline to standardize data and extract key features, combining five different image channels into a single representative data channel.</li>
-                        <li>Demonstrated expertise in feature extraction, data visualization, and image processing to streamline analysis for large datasets.</li>
+                        <li>Built a preprocessing pipeline to standardize data and extract key features.</li>
                     </ul>
                     <a href="https://github.com/Huyhoclaptrinh/data-science-assignments/tree/main/ML/Assignment%205" target="_blank" class="project-button">View Project</a>
                     <a href="https://medium.com/@jerryphung282/landsat-image-processing-with-pca-147f2728e08c" target="_blank" class="blog-button">View Blog</a>
@@ -316,9 +362,9 @@
                 <li class="project-item">
                     <h3>Quarter Backs in 2022 Prediction</h3>
                     <ul>
-                        <li>Developed a predictive model to estimate ratings based on completion percentages, implementing simple linear regression with matrix inversion techniques (inv and pinv) using <b>Python</b> and <p>NumPy</p>.</li>
-                        <li>Analyzed datasets to identify trends and patterns, leveraging <b>linear algebra concepts</b> for accurate prediction and parameter optimization.</li>
-                        <li>Demonstrated proficiency in scientific programming and data preprocessing for real-world applications in prediction and analysis.</li>
+                        <li><strong>Tech Stack:</strong> Python, NumPy.</li>
+                        <li>Developed a predictive model to estimate ratings based on completion percentages, implementing simple linear regression with matrix inversion techniques.</li>
+                        <li>Analyzed datasets to identify trends and patterns, leveraging <b>linear algebra concepts</b>.</li>
                     </ul>
                     <a href="https://github.com/Huyhoclaptrinh/data-science-assignments/tree/main/ML/Assignment%204" target="_blank" class="project-button">View Project</a>
                     <a href="" target="_blank" class="blog-button">View Blog</a>
@@ -326,9 +372,10 @@
                 <li class="project-item">
                     <h3>Trip AI Generator</h3>
                     <ul>
-                        <li>Designed and implemented a trip planning application using <b>CrewAI</b> and the <b>Gemini API</b>, optimizing for cost-effectiveness and flexibility.</li>
+                        <li><strong>Tech Stack:</strong> Python, CrewAI, Gemini API, Serper API.</li>
+                        <li>Designed and implemented a trip planning application using <b>CrewAI</b> and the <b>Gemini API</b>.</li>
                         <li>Integrated <b>Serper API</b> for secure and efficient server API key management.</li>
-                        <li>Developed trip generation logic to provide personalized recommendations based on user inputs.</li>
+                        <li>Developed trip generation logic to provide personalized recommendations.</li>
                     </ul>
                     <a href="https://github.com/Huyhoclaptrinh/personal-project/tree/master/AI%20Generator" target="_blank" class="project-button">View Project</a>
                     <a href="https://medium.com/@jerryphung282/trip-ai-generator-revolutionizing-travel-planning-with-ai-b4848f7b84c9" target="_blank" class="blog-button">View Blog</a>
@@ -336,10 +383,10 @@
                 <li class="project-item">
                     <h3>Text-To-Speech Application</h3>
                     <ul>
+                        <li><strong>Tech Stack:</strong> Python, Audio Processing Libraries.</li>
                         <li>Developing a <b>Python-based</b> text-to-speech application that converts written text into spoken words.</li>
                         <li>Handling text input and audio output.</li>
                         <li>Generating visual representations of audio signals, including waveforms and spectrograms.</li>
-                        <li>Integrating components, allowing users to input text and receive corresponding speech output.</li>
                     </ul>
                     <a href="https://github.com/Huyhoclaptrinh/Text-To-Speech" target="_blank" class="project-button">View Project</a>
                     <a href="" target="_blank" class="blog-button">View Blog</a>
@@ -347,10 +394,9 @@
                 <li class="project-item">
                     <h3>Bookstore Management Application</h3>
                     <ul>
+                        <li><strong>Tech Stack:</strong> Python.</li>
                         <li>Developed a <b>Python-based</b> application to manage bookstore operations efficiently.</li>
                         <li>Implemented features for inventory management, sales tracking, and customer management.</li>
-                        <li>Utilized a user-friendly interface to streamline book selection and purchase processes.</li>
-                        <li>Generated unique order IDs and maintained detailed transaction records for accurate billing and documentation.</li>
                     </ul>
                     <a href="https://github.com/Huyhoclaptrinh/Bookstore-Management" target="_blank" class="project-button">View Project</a>
                     <a href="" target="_blank" class="blog-button">View Blog</a>
@@ -358,10 +404,9 @@
                 <li class="project-item">
                     <h3>Senate Voting Records Analysis</h3>
                     <ul>
+                        <li><strong>Tech Stack:</strong> Python, Pandas, Matplotlib.</li>
                         <li>Conducted an analysis of U.S. Senate voting records to identify patterns and trends in legislative behavior.</li>
                         <li>Utilized Python libraries such as <b>Pandas</b> for data manipulation and <b>Matplotlib</b> for data visualization.</li>
-                        <li>Analyzed roll call vote data to assess party-line voting tendencies and instances of bipartisan support.</li>
-                        <li>Presented findings through comprehensive visualizations and a detailed report, highlighting key insights into voting behaviors.</li>
                     </ul>
                     <a href="https://github.com/Huyhoclaptrinh/data-science-assignments/tree/main/ML/Assignment%202" target="_blank" class="project-button">View Project</a>
                     <a href="https://medium.com/@jerryphung282/analyzing-senate-voting-records-finding-ideological-alignments-f166cf79e959" target="_blank" class="blog-button">View Blog</a>
@@ -369,10 +414,9 @@
                 <li class="project-item">
                     <h3>Hypothesis Testing with One-Sample t-Test</h3>
                     <ul>
+                        <li><strong>Tech Stack:</strong> Python, SciPy.</li>
                         <li>Conducted a one-sample t-test to assess whether the sample mean significantly differs from a known population mean.</li>
                         <li>Utilized Python's <b>SciPy</b> library, specifically the <code>ttest_1samp</code> function, to perform the statistical analysis.</li>
-                        <li>Analyzed a dataset to determine if the observed sample mean deviates from the expected population mean, providing insights into the statistical significance of the results.</li>
-                        <li>Presented findings through clear visualizations and a comprehensive report, making the conclusions accessible to a non-technical audience.</li>
                     </ul>
                     <a href="https://github.com/Huyhoclaptrinh/data-science-assignments/tree/main/ML/Assignment%207" target="_blank" class="project-button">View Project</a>
                     <a href="" target="_blank" class="blog-button">View Blog</a>
